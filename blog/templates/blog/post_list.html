@@ -1,22 +1,41 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Il blog di Cate!</title>
-</head>
-<body>
-    <h1>Benevuti nel blog di Cate!</h1>
-    <h2>Solo cose belle!</h2>
+    ml (blog/templates/blog/post_list.html):
 
-    {% for post in posts %}
-    <div>
-        <p>published: {{ post.published_date }}</p>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.text|linebreaksbr }}</p>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center titolo">
+                <h1>Benevuti nel blog di Cate!</h1>
+                <h2>Solo cose belle!</h2>
+            </div>
+        </div>
+        <div class="row">
+            {% for post in posts %}
+            <div class="col-md-4 card">
+                <p>published: {{ post.published_date }}</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+            {% endfor %}
+        </div>
     </div>
-    {% endfor %}
-    
+    </div>
+    </div>
+    </div>
+
 </body>
+
 </html>

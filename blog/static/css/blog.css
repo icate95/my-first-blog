@@ -1,0 +1,16 @@
+body {
+    background-color: #2d2d2d;
+
+}
+.titolo{
+    margin-bottom: 2em;
+    color: darkorange
+}
+ .card {
+     color: #2d2d2d;
+     background-color: #fff;
+     border: 0.5px solid #2d2d2d;
+     border-radius: 5px;
+     height: 300px;
+     padding: 1em
+ }
